@@ -10,8 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label : UILabel!
+    
+    @IBOutlet weak var button: UIButton!
+    var isVisible : Bool = false
+    @IBAction func action(sender: AnyObject) {
+        if (isVisible)
+        {
+            self.label.text = ""
+            isVisible = false
+        }
+        else
+        {
+            self.label.text = "Ildar = Big Dick"
+            isVisible = true
+            
+        }
+        print("tap")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.label.text = ""
+        self.button.backgroundColor = UIColor.redColor()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
